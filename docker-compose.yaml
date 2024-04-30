@@ -1,0 +1,19 @@
+version: '3'
+
+
+services:
+
+  bot:
+    container_name: bot
+    restart: on-failure
+    build:
+      context: .
+      dockerfile: Dockerfile
+    entrypoint: ["python3", "app_bot.py"]
+    ports:
+      - 8883:8883
+
+
+
+
+
